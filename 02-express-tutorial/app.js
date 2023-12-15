@@ -29,6 +29,7 @@ const server = http.createServer((req, res) => {
     res.write(homeStyles);
     res.end();
   }
+
   
   // image/logo
   else if (url === "/logo.svg") {
