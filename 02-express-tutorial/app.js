@@ -42,15 +42,12 @@ const server = http.createServer((req, res) => {
     res.end();
   }
 
-
   // 404
   else {
     res.writeHead(404, { "content-type": "text/html" });
     res.write("<h1>page not found</h1>");
     res.end();
   }
-  
 });
-
 
 server.listen(5000);
