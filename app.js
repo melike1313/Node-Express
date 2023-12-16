@@ -3,16 +3,18 @@ const app = express()
 
 app.get('/',(req,res)=>{
   console.log('console hit the resource')
-res.send('Home page')
+res.status(200).send('Home page')
 })
 
 
 app.get('/about',(req,res)=>{
   console.log('console hit the resource')
-res.send('About page')
+res.status(200).send('About page')
 })
 
-
+app.all('*', (req, res) => {
+  res.status(404).send('<h1>Resource not found</h1>')
+})
 
 app.listen(5000,()=>{
   console.log('port 5000 is listening')
