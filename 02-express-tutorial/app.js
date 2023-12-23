@@ -6,7 +6,6 @@ app.get("/", (req, res) => {
   res.send('<h1>Home Page</h1><a href="/api/products">products</a>');
 });
 
-
 app.listen(5000, () => {
   console.log("Server 5000 are listening ...");
 });
