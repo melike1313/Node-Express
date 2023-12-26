@@ -13,7 +13,11 @@ app.get("/api/products",(req,res)=>{
   })
   res.json(newProducts)
 })
+app.get("/api/v1/query",(req,res  )=>{
+  console.log(req.query);
+  res.send("Hello world")
 
+})
 app.get("/api/products/:productID",(req,res)=> {
   // console.log(req)
   // console.log(req.params)
