@@ -29,6 +29,7 @@ app.get("/api/v1/query", (req, res) => {
     // res.status(200).send("no product matched you")
     return res.status(200).json({ success: true, data: [] });
   }
+  
   res.status(200).json(sortedProducts);
 });
 app.get("/api/products/:productID", (req, res) => {
