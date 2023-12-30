@@ -39,7 +39,7 @@ app.get("/api/products/:productID", (req, res) => {
   const singleProduct = products.find(
     (product) => product.id === Number(productID)
   );
-  
+
   if (!singleProduct) {
     return res.status(404).send("The Product Not Found ");
   }
@@ -50,6 +50,7 @@ app.get("/api/products/:productID/reviews/:reviewID", (req, res) => {
   console.log(req.params);
   res.send("hello world");
 });
+
 
 app.get("/api/products/2", (req, res) => {
   const secondProduct = products.find((product) => product.id === 2);
