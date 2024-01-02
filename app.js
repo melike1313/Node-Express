@@ -1,21 +1,25 @@
 const express = require("express");
 const app = express();
-const { products } = require("./data");
-
+// const { products } = require("./data");
+const logger = require('./logger')
 // req => middleware => res 
-const logger =()=>{
-  const method=req.method;
-  const url = req.url;
-  const time=req.Date().getFullYear();
-  console.log(method,url,time)
-}
+app.use('./api',logger)
 
 app.get('/',(req,res)=>{
   res.send("Home")
 })
 
-app.get('/about',(req,res)=>{
+app.get('/about', (req,res)=>{
   res.send("About")
+})
+
+
+app.get('/api/products',(req,res)=>{
+  res.send("products")
+})
+
+app.get('/api/items',(req,res)=>{
+  res.send("items")
 })
 
 app.listen(5000, () => {
