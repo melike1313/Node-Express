@@ -15,3 +15,4 @@ const currentOS = {
   freemem(),
 }
 console.log(currentOS)
+
