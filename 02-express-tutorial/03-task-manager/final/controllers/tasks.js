@@ -11,6 +11,7 @@ const createTask = asyncWrapper(async (req, res) => {
   res.status(201).json({ task })
 })
 
+
 const getTask = asyncWrapper(async (req, res, next) => {
   const { id: taskID } = req.params
   const task = await Task.findOne({ _id: taskID })
